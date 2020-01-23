@@ -1,0 +1,15 @@
+package com.lf.regex;
+
+public class Group {
+
+	public static void main(String[] args) {
+		
+		group();
+	}
+	
+	public static void group() {
+		String regex = "(dog){3}";
+		System.out.println("dogdog".matches(regex));
+	}
+
+}

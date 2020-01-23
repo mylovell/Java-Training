@@ -1,0 +1,9 @@
+package com.lf.Enum;
+
+//public class Season1 {
+//
+//}
+
+public enum Season1 {
+	SPRING, SUMMER, FALL, WINTER
+}

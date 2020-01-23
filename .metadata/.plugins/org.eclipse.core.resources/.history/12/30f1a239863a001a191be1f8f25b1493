@@ -1,0 +1,11 @@
+package com.lf;
+
+public class Person {
+	
+	public void eat(Eatable e) {
+		System.out.println(
+				"eat - " + e.name()
+				+ " - " + e.energy());
+	}
+	
+}

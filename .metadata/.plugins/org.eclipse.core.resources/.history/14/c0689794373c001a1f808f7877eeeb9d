@@ -1,0 +1,28 @@
+package com.lf.Calendar;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Calendar calendar = Calendar.getInstance();
+		printTime(calendar);
+		
+		calendar.set(2020, 06, 06);
+		printTime(calendar);
+		
+		
+	}
+	
+	private static void printTime(Calendar date) {
+		SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String string = fmt.format(date);
+		System.out.println(string);
+	}
+
+}

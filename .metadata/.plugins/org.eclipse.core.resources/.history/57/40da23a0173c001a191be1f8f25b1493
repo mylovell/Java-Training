@@ -1,0 +1,5 @@
+package com.lf.Enum;
+
+public enum Direction {
+
+}

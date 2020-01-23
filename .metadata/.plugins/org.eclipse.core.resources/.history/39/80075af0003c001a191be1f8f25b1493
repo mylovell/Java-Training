@@ -1,0 +1,26 @@
+package com.lf.Enum;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Season season1 = Season.SPRING;
+		Season season2 = Season.SUMMER;
+		Season season3 = Season.FALL;
+		Season season4 = Season.WINTER;
+		
+		System.out.println(season1);
+		System.out.println(season2);
+		System.out.println(season3);
+		System.out.println(season4);
+
+		test(season1);
+	}
+	
+	public static void test(Season season) {
+		if (season == Season.SPRING) {
+			System.out.println("春天");
+		}
+	}
+
+}

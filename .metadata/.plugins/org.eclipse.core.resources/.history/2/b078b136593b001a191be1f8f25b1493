@@ -1,0 +1,17 @@
+package com.Consumer;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int[] nums = {11, 33, 44, 88, 77, 66};
+		Person person = new Person();
+		
+		person.forEach1(nums, (n) -> {
+			String resultString = ((n & 1) == 0) ? "偶数" : "奇数";
+			System.out.println(n + "是" + resultString);
+		});
+		
+	}
+	
+}

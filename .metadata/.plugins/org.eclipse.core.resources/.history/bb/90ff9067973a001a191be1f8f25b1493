@@ -1,0 +1,30 @@
+package com.lf;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+//		Person person = new Person();
+//		person.eat(person);
+		
+		Eatable eatable = new Eatable() {
+			
+			@Override
+			public String name() {
+//				person.age = 8;
+				return "rice";
+			}
+			
+			@Override
+			public int energy() {
+				// TODO Auto-generated method stub
+				return 90;
+			}
+		};
+		
+		System.out.println(eatable.name() + eatable.energy());
+				
+		
+	}
+
+}

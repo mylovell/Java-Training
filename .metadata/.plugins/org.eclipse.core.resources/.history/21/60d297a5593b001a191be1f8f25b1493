@@ -1,0 +1,31 @@
+package com.Consumer;
+
+import java.util.function.Consumer;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Main main = new Main();
+		main.run();
+	}
+	
+	public void run() {
+		int[] nums = {11, 33, 44, 88, 77, 66};
+		Person person = new Person();
+		
+		person.forEach(nums, (n) -> {
+			String result = ((n & 1) == 0) ? "偶数" : "奇数";
+			System.out.println(n + "是" + result);
+		});
+		
+	}
+	
+	public void forEach(int[] nums, Consumer<Integer> c) {
+		if (nums == null || c == null) return;
+		for (int n : nums) {
+			c.accept(n);
+		}
+	}
+	
+}

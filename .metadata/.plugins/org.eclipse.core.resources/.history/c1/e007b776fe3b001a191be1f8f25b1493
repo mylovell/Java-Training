@@ -1,0 +1,12 @@
+package com.lf.Enum;
+
+public class Season {
+	
+	private Season() {}
+	public static final Season SPRING = new Season();
+	public static final Season SUMMER = new Season();
+	public static final Season FALL = new Season();
+	public static final Season WINTER = new Season();
+	public static final Object SPRING1 = null;
+
+}

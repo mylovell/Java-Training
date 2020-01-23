@@ -1,0 +1,17 @@
+package com.Consumer;
+
+import java.util.function.Consumer;
+
+public class Person {
+	
+	public void forEach1(int[] nums, Consumer<Integer> c) {
+		if (nums == null || c == null) return;
+		for (int n : nums) {
+			c.accept(n);
+		}
+	}
+	
+	
+
+
+}

@@ -1,0 +1,6 @@
+package com.lf.Enum;
+
+public enum Direction {
+	RIGHT,LEFT,UP,DOWN
+
+}

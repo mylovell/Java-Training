@@ -1,0 +1,18 @@
+package com.lf.Calendar;
+
+import java.util.Calendar;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Calendar calendar = Calendar.getInstance();
+		System.out.println(calendar);
+		
+		calendar.set(2020, 06, 06);
+		System.out.println(calendar);
+		
+		
+	}
+
+}

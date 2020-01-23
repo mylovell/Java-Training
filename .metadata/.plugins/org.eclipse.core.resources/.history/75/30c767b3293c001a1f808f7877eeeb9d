@@ -1,0 +1,18 @@
+package com.lf.String;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String s1 = "mj";
+		String s2 = new String("mj");
+		String s3 = new String(s1);
+		String s4 = new String(s2);
+		
+		char[] cs = {'m','j'};
+		String s5 = new String(cs);
+		String s6 = new String(s5);
+
+	}
+
+}

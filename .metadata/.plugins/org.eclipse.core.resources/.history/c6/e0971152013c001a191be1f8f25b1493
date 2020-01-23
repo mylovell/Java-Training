@@ -1,0 +1,12 @@
+package com.lf.Enum;
+
+public class Season {
+	
+	// 用自定义类 通过常量来做到枚举的效果
+	private Season() {}
+	public static final Season SPRING = new Season();
+	public static final Season SUMMER = new Season();
+	public static final Season FALL = new Season();
+	public static final Season WINTER = new Season();
+
+}
