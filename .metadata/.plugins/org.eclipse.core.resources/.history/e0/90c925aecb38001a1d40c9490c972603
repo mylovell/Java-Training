@@ -1,7 +1,0 @@
-package com.lf;
-
-public final class Person {
-	
-	public int age = 11;
-
-}

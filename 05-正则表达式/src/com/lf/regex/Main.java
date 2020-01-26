@@ -36,8 +36,6 @@ public class Main {
 		System.out.println(".".matches(regex4));
 		System.out.println("------------------4");
 		
-		
-		
 	}
 
 }

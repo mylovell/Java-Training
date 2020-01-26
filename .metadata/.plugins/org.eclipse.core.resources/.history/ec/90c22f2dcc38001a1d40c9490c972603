@@ -1,6 +1,0 @@
-package com.lf;
-
-public class Student {
-
-	public int age = 12;
-}

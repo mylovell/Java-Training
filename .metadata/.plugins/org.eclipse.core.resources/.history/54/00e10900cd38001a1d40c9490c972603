@@ -1,5 +1,0 @@
-package com.lf;
-
-public class SuperMan extends Person {
-
-}

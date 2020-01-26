@@ -1,5 +1,0 @@
-package com.lf;
-
-public class GoodStudent extends Student {
-
-}
