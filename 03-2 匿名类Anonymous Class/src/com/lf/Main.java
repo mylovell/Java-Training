@@ -19,9 +19,9 @@ public class Main {
 			
 			@Override
 			public void say() {
-				System.out.println("happy happy !");;
+				System.out.println("happy happy !");
 			}
-		}
+		};
 //		.say();
 		
 		System.out.println(eatable.name() + eatable.energy());
