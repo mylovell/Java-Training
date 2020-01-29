@@ -7,6 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Integer[] nums = { 11, 22, 33 };
+		// 拿到遍历的数据直接做事
 		forEach(nums, (num) -> {
 			System.out.println(num+100);
 		});
