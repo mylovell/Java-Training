@@ -5,9 +5,15 @@ import java.util.function.Consumer;
 
 public class Files {
 	
-	private static void mkparents(File file) {
+	public static void mkparents(String pathname) {
+		File file = new File(pathname);
+		mkparents(file);
+	}
+	
+	public static void mkparents(File file) {
 		File parent = file.getParentFile();
-		if (parent.exists()) return;
+		// 不能写parent.exists()，因为最顶端的目录没parent，为null，调用方法报错
+		if (parent == null) return;
 		parent.mkdirs();
 	}
 	
