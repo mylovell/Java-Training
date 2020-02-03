@@ -15,13 +15,26 @@ import java.nio.charset.Charset;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 //		bufferedMethod();
 //		printByLine();
 		
+//		changeEncode();
+		
+		systemIn();
+		
+	}
 
-		changeEncode();
+
+
+	private static void systemIn() throws IOException {
+		// 接收控制台的输入
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		String str;
+		while ((str = reader.readLine()) != null) {
+			System.out.println(str);
+		}
 		
 	}
 
