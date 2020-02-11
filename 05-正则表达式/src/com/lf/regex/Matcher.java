@@ -8,8 +8,9 @@ public class Matcher {
 		
 //		findAll("\\d+", "_123_456789_");
 //		findAll("\\?d{3}", "_123_456789_");
-		test_Greedy_Reluctant_Possessive();
-		
+//		test_Greedy_Reluctant_Possessive();
+//		matcher1();
+		matcher2();
 	}
 	
 	
@@ -61,5 +62,19 @@ public class Matcher {
 			System.out.println("No match.");
 		}
 	}
+	
+	static void matcher1() {
+		String input = "a";
+//		findAll("a?", input);
+//		findAll("a*", input);
+//		findAll("a+", input);
+	}
 
+	static void matcher2() {
+		String input = "afooaaaaaafooa";
+//		findAll(".*foo", input);
+//		findAll(".*?foo", input);
+//		findAll(".*+foo", input);
+	}
+	
 }

@@ -1,12 +1,18 @@
 package com.lf.regex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Group {
 
 	public static void main(String[] args) {
 		
-		group();
+//		group();
 //		backreference();
 //		backreference2();
+//		group2();
+		group3();
+		
 	}
 	
 	public static void group() {
@@ -27,5 +33,26 @@ public class Group {
 		System.out.println("lcPKPKlc".matches(regex));// true
 		System.out.println("lyPKPKlc".matches(regex));// false
 	}
+	
+	static void group2() {
+		String input = "aa11+bb23-mj33*dd44/5566%ff77";
+		String regex = "([a-z])\\1(\\d)\\2";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(input);
+		while (m.find()) {
+			System.out.println(m.group());
+		}
+	}
+	
+	static void group3() {
+		String input = "aa12+bb34-mj56*dd78/9900";
+		String regex = "[a-z]{2}\\d(\\d)";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(input);
+		while (m.find()) {
+			System.out.println(m.group(1));
+		}
+	}
+	
 
 }
