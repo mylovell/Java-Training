@@ -10,11 +10,11 @@ public class Main {
 		Box<? extends Number> box4 = null;
 		box4 = box1;
 		box4 = box2;
-		box4 = box3;
+//		box4 = box3;
 		
 		showBox(box1);
 		showBox(box2);
-		showBox(box3);
+//		showBox(box3);
 		showBox(box4);
 		
 	}
