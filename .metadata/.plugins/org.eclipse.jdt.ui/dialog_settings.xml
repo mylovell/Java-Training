@@ -120,4 +120,208 @@
 	<section name="WorkingSetModelAwareSelectionDialog">
 		<item key="ShowVisibleOnly" value="true"/>
 	</section>
+	<section name="JarPackageWizard">
+		<item key="JarPackageWizardPage.EXPORT_CLASS_FILES" value="false"/>
+		<item key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER" value="false"/>
+		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="true"/>
+		<item key="JarPackageWizardPage.REFACTORINGS" value="false"/>
+		<item key="JarPackageWizardPage.COMPRESS" value="true"/>
+		<item key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES" value="false"/>
+		<item key="JarPackageWizardPage.OVERWRITE" value="false"/>
+		<item key="jarOptionsWizardPage.EXPORT_WARNINGS" value="true"/>
+		<item key="jarOptionsWizardPage.EXPORT_ERRORS" value="true"/>
+		<item key="jarOptionsWizardPage.STORE_USE_SRC_FOLDERS" value="false"/>
+		<item key="jarOptionsWizardPage.BUILD_IF_NEEDED" value="true"/>
+		<item key="jarOptionsWizardPage.SAVE_DESCRIPTION" value="false"/>
+		<item key="jarOptionsWizardPage.DESCRIPTION_LOCATION" value=""/>
+		<item key="JarManifestWizardPage.GENERATE_MANIFEST" value="true"/>
+		<item key="JarManifestWizardPage.SAVE_MANIFEST" value="false"/>
+		<item key="JarManifestWizardPage.REUSE_MANIFEST" value="false"/>
+		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
+		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
+		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate-Resources.jar"/>
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/Calculate.jar"/>
+		</list>
+	</section>
+	<section name="FatJarPackageWizard">
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="/Users/fengluo/Documents/Java①/Code"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Main (36) - 10-Swing"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value="/Users/fengluo/Documents/Java①/Code.xml"/>
+			<item value=".xml"/>
+		</list>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item key="DIALOG_X_ORIGIN" value="210"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="600"/>
+		<item key="DIALOG_HEIGHT" value="531"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home/bin/javadoc"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="public"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="1.8"/>
+		<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/10-Swing/javadoc.xml"/>
+		<item key="destdir" value="/Users/fengluo/Documents/Java①/LFJavaDoc"/>
+		<item key="vmparam" value="-encoding UTF-8 -charset UTF-8"/>
+		<section name="projects">
+			<section name="06-通配符">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/06-通配符/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/06-通配符/javadoc.xml"/>
+			</section>
+			<section name="09-IO">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/09-IO/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/09-IO/javadoc.xml"/>
+			</section>
+			<section name="12-网络编程">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/12-网络编程/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/12-网络编程/javadoc.xml"/>
+			</section>
+			<section name="04-日期、枚举、字符串、异常">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/04-日期、枚举、字符串、异常/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/04-日期、枚举、字符串、异常/javadoc.xml"/>
+			</section>
+			<section name="10-Swing">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/LFJavaDoc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/10-Swing/javadoc.xml"/>
+			</section>
+			<section name="02-2 Constant">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/02-2 Constant/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/02-2 Constant/javadoc.xml"/>
+			</section>
+			<section name="01-静态初始化块">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-静态初始化块/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-静态初始化块/javadoc.xml"/>
+			</section>
+			<section name="14-测试">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/14-测试/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/14-测试/javadoc.xml"/>
+			</section>
+			<section name="03-1 静态嵌套类">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/03-1 静态嵌套类/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/03-1 静态嵌套类/javadoc.xml"/>
+			</section>
+			<section name="07-集合">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/07-集合/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/07-集合/javadoc.xml"/>
+			</section>
+			<section name="08-并发编程">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/08-并发编程/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/08-并发编程/javadoc.xml"/>
+			</section>
+			<section name="01-方法重载">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-方法重载/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-方法重载/javadoc.xml"/>
+			</section>
+			<section name="09-2 缓存流">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/09-2 缓存流/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/09-2 缓存流/javadoc.xml"/>
+			</section>
+			<section name="11-Asserts">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/11-Asserts/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/11-Asserts/javadoc.xml"/>
+			</section>
+			<section name="01-基础语法">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-基础语法/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-基础语法/javadoc.xml"/>
+			</section>
+			<section name="05-正则表达式">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/05-正则表达式/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/05-正则表达式/javadoc.xml"/>
+			</section>
+			<section name="01-Static">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-Static/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-Static/javadoc.xml"/>
+			</section>
+			<section name="01-单例">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-单例/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-单例/javadoc.xml"/>
+			</section>
+			<section name="01-Access Control">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-Access Control/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-Access Control/javadoc.xml"/>
+			</section>
+			<section name="03-3 Lambda">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/03-3 Lambda/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/03-3 Lambda/javadoc.xml"/>
+			</section>
+			<section name="06-泛型">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/06-泛型/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/06-泛型/javadoc.xml"/>
+			</section>
+			<section name="03-2 匿名类Anonymous Class">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/03-2 匿名类Anonymous Class/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/03-2 匿名类Anonymous Class/javadoc.xml"/>
+			</section>
+			<section name="01-Hello World">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/01-Hello World/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/01-Hello World/javadoc.xml"/>
+			</section>
+			<section name="13-爬虫">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/13-爬虫/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/13-爬虫/javadoc.xml"/>
+			</section>
+			<section name="02-3 局部类">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/02-3 局部类/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/02-3 局部类/javadoc.xml"/>
+			</section>
+			<section name="06-泛型比较">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/06-泛型比较/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/06-泛型比较/javadoc.xml"/>
+			</section>
+			<section name="02-1 final">
+				<item key="href" value=""/>
+				<item key="destdir" value="/Users/fengluo/Documents/Java①/Code/02-1 final/doc"/>
+				<item key="antpath" value="/Users/fengluo/Documents/Java①/Code/02-1 final/javadoc.xml"/>
+			</section>
+		</section>
+	</section>
 </section>
