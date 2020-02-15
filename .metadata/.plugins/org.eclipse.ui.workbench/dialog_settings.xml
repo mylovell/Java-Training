@@ -4,17 +4,12 @@
 		<item key="dialogHeight" value="500"/>
 		<item key="dialogWidth" value="800"/>
 		<list key="orderedElements">
-			<item value="org.eclipse.jdt.ui.edit.text.java.search.declarations.in.working.set"/>
 		</list>
 		<list key="orderedProviders">
-			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textEntries">
-			<item value="2"/>
 		</list>
 		<list key="textArray">
-			<item value="set"/>
-			<item value="setbound"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">

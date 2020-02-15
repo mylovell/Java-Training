@@ -1,12 +1,10 @@
 package com.lf.jframe;
 
-
-
 public class Main {
 
 	public static void main(String[] args) {
 		
-		new MyFrame("简单计算器").setVisible(true);
+		new MyFrame().setVisible(true);
 		
 //		JFrame frame = new JFrame("我是窗口plat");
 //		

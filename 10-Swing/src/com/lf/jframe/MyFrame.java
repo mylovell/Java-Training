@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-
+import com.lf.io.Files;
 
 
 /**
@@ -19,6 +19,10 @@ import javax.swing.JTextField;
  */
 @SuppressWarnings("serial")// 表示不想生成序列化接口
 public class MyFrame extends JFrame {
+	
+	public MyFrame() {
+		this("简易计算器");
+	}
 
 	/**
 	 * 
@@ -28,7 +32,7 @@ public class MyFrame extends JFrame {
 		
 		super(string);
 		// x,y是针对桌面左上角
-		this.setBounds(50,50,450,200);
+		this.setBounds(50, 50, 500, 300);
 		// 点击关闭时，程序停止
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 流水布局，LEFT从左到右，垂直方向距离15、水平方向距离15
@@ -92,20 +96,21 @@ public class MyFrame extends JFrame {
 		});
 		this.add(button);
 		
-		JTextField tf3 = new JTextField(10);
+		JTextField tf3 = new JTextField("要保存的内容",10);
 		tf3.setFont(font);
 		this.add(tf3);
 
-		JTextField tf4 = new JTextField(10);
+		JTextField tf4 = new JTextField("保存路径",10);
 		tf4.setFont(font);
 		this.add(tf4);
 		
 		JButton saveBtn = new JButton("保存");
 		saveBtn.setFont(font);
 		saveBtn.addActionListener((evt) -> {
-			
+			Files.write(tf3.getText(), tf4.getText());
 		});
 		this.add(saveBtn);
+		
 		
 	}
 	

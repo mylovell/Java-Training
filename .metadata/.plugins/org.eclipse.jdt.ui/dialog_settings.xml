@@ -121,7 +121,7 @@
 		<item key="ShowVisibleOnly" value="true"/>
 	</section>
 	<section name="JarPackageWizard">
-		<item key="JarPackageWizardPage.EXPORT_CLASS_FILES" value="false"/>
+		<item key="JarPackageWizardPage.EXPORT_CLASS_FILES" value="true"/>
 		<item key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER" value="false"/>
 		<item key="JarPackageWizardPage.EXPORT_JAVA_FILES" value="true"/>
 		<item key="JarPackageWizardPage.REFACTORINGS" value="false"/>
@@ -140,6 +140,8 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/Files.jar"/>
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/FileOperate.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate-Resources.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/Calculate.jar"/>
@@ -148,10 +150,11 @@
 	<section name="FatJarPackageWizard">
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="/Users/fengluo/Documents/Java①/Code"/>
-		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="2"/>
 		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Main (36) - 10-Swing"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
