@@ -84,9 +84,9 @@ public class Operator {
 		
 		
 		// 10进制打印成16进制
-//		System.out.println("0x" + Integer.toHexString(2020));
-//		System.out.println("0x" + Long.toHexString(2020L));
-		
+//		System.out.println("0x" + Integer.toHexString(2020));// 0x7e4
+//		System.out.println("0x" + Long.toHexString(2020L));// 0x7e4
+//		System.out.println("0x" + Integer.toHexString(-1));// 0xffffffff
 		
 		
 		// 按位或

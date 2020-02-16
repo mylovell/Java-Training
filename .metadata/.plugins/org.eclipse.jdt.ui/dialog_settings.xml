@@ -140,6 +140,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/RegexTool.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/Files.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/FileOperate.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate-Resources.jar"/>
@@ -151,9 +152,10 @@
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="/Users/fengluo/Documents/Java①/Code"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="2"/>
-		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Main (36) - 10-Swing"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="DigitChangeFrame (1) - 16-GUI"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>
 		</list>

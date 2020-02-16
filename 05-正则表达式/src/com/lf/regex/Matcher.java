@@ -10,7 +10,8 @@ public class Matcher {
 //		findAll("\\?d{3}", "_123_456789_");
 //		test_Greedy_Reluctant_Possessive();
 //		matcher1();
-		matcher2();
+//		matcher2();
+		matcher3();
 	}
 	
 	
@@ -72,9 +73,17 @@ public class Matcher {
 
 	static void matcher2() {
 		String input = "afooaaaaaafooa";
-//		findAll(".*foo", input);
-//		findAll(".*?foo", input);
-//		findAll(".*+foo", input);
+		findAll(".*foo", input);
+		findAll(".*?foo", input);
+		findAll(".*+foo", input);
+	}
+	
+	static void matcher3() {
+		String input = "afooaaaaaafoo";
+		findAll(".*foo", input);// "afooaaaaaafoo",[0,13)
+		findAll(".*?foo", input);
+		findAll(".*+foo", input);// No match.
+		findAll("afo.*+", input);// "afooaaaaaafoo",[0,13)
 	}
 	
 }
