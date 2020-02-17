@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
-    <fullyQualifiedTypeName name="java.net.URL"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.lang.Short"/>
     <fullyQualifiedTypeName name="java.lang.AssertionError"/>
     <fullyQualifiedTypeName name="com.lf.Student"/>
@@ -38,10 +35,8 @@
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="com.lf.进制转换.DigitChange"/>
     <fullyQualifiedTypeName name="com.lf.进制转换.DigitChangeFrame"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.border.Border"/>
     <fullyQualifiedTypeName name="javax.management.loading.PrivateClassLoader"/>
-    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="java.lang.Byte"/>
@@ -52,12 +47,17 @@
     <fullyQualifiedTypeName name="javax.swing.JTextPane"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.math.BigInteger"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Float"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyAdapter"/>
-    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.util.function.BinaryOperator"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="com.lf.Asserts.Asserts"/>
+    <fullyQualifiedTypeName name="com.lf.LFAsserts.LFAsserts"/>
 </qualifiedTypeNameHistroy>

@@ -16,6 +16,7 @@
 	<section name="OptionalMessageDialog.hide.">
 		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
 		<item key="configure_problem_severity_dialog_id" value="false"/>
+		<item key="RunnableJar.export.ipwarning" value="false"/>
 	</section>
 	<section name="NewClassWizardPage">
 		<item key="create_constructor" value="false"/>
@@ -151,10 +152,11 @@
 	<section name="FatJarPackageWizard">
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="/Users/fengluo/Documents/Java①/Code"/>
-		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="2"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
 		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="DigitChangeFrame (1) - 16-GUI"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换.jar"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换2.0.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换2.0.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/1/Calculate.jar"/>

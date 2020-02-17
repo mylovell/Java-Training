@@ -9,6 +9,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.function.BinaryOperator;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,17 +23,17 @@ import javax.swing.JTextPane;
  * 支持(正)负整数
  * 		-【正负整数转成十六进制没问题，但负的十六进制转整数有问题，Long.parseLong和Long.valueOf只认正数，解决如下】
  * 		-【负十六进制 <--> 十进制整数，用 BigInteger 】
- * 		-【负二进制 <--> 十进制整数，要用 BigInteger 】
- * 不支持检测超出Long最大值【可使用 BigDecimal 】
+ * 		-【负二进制 <--> 十进制整数，要用 BigInteger (有坑，先转Long，再String，勿直接String)】
+ * 不支持检测超出Long最大值【二、十、十六进制之间的大小比较，可用 BigInteger 】
  * 不支持浮点数
- * 不支持下划线
+ * 支持下划线
  * @author fengluo
  *
  */
 @SuppressWarnings("serial")
 public class DigitChangeFrame extends JFrame {
 	
-	private int tfW = 25;
+	private int tfW = 50;
 	
 	public static void main(String[] args) {
 		
@@ -42,22 +43,43 @@ public class DigitChangeFrame extends JFrame {
 //		System.out.println(Long.MIN_VALUE);// -9223372036854775808
 
 		// 如何比较超过Long最大值的数 ———— 用BigDecimal
-		Long long1 = Long.valueOf("9223372036854775807");
-		BigDecimal b1 = new BigDecimal("9223372036854775807");
-		BigDecimal b2 = new BigDecimal("92233720368547758091");
-		int b = b1.compareTo(b2);
-		System.out.println(b);
+//		Long long1 = Long.valueOf("9223372036854775807");
+//		BigDecimal b1 = new BigDecimal("9223372036854775807");
+//		BigDecimal b2 = new BigDecimal("92233720368547758091");
+//		int b = b1.compareTo(b2);
+//		System.out.println(b);
 		
-
+		
 		// (正)负二进制 --> 十进制
 //		String s = "11111111111111111111111111111111";
 //		Long long1 = new BigInteger(s, 2).longValue();
 //		System.out.println(long1);
 		
 		// 负数十六进制 --> 十进制
-//		String string = "fffffffffffffff6";// 16进制字符串前面不能加 0x
+//		String string = "fffffffffffffff6";// -10 16进制字符串前面不能加 0x
 //		long long1 = new BigInteger(string, 16).longValue();
 //		System.out.println(long1);
+		// -11 fffffffffffffff5
+		// -10 fffffffffffffff6 0b1111111111111111111111111111111111111111111111111111111111110110
+//		BigInteger long0 = new BigInteger("fffffffffffffff5", 16);
+//		BigInteger long1 = new BigInteger("11111111111111111111111111111111", 2);
+//		int in = long0.compareTo(long1);
+//		System.out.println(in);
+		
+		
+		
+		// 用 BigInteger 各种进制之间转（注意：负2、16进制转10进制有坑）
+//		BigInteger bi = new BigInteger("-10", 10);
+//		String binary = bi.toString(2);
+//		String decimal = ((Long)bi.longValue()).toString();// (负十六进制)负二进制 --> 十进制，的正确方法
+//		String hex = bi.toString(16);
+//		String oct = bi.toString(8);
+//		System.out.println(binary);
+//		System.out.println(decimal);
+//		System.out.println(hex);
+//		System.out.println(oct);
+		
+		
 		
 		// (正)负整数 --> 二进制、十六进制
 //		Long integer = Long.valueOf(-10);
@@ -68,14 +90,14 @@ public class DigitChangeFrame extends JFrame {
 	}
 	
 	public DigitChangeFrame() {
-		this("进制转换1.0");
+		this("进制转换2.0");
 	}
 	
 	public DigitChangeFrame(String string) {
 		super(string);
 		
 		// x,y是针对桌面左上角
-		this.setBounds(50, 50, 500, 400);
+		this.setBounds(50, 50, 900, 400);
 		// 点击关闭时，程序停止
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 流水布局，LEFT从左到右，垂直方向距离15、水平方向距离15
@@ -94,11 +116,14 @@ public class DigitChangeFrame extends JFrame {
 		this.add(btn1);
 		
 		// TextField 提示
-		JTextField tipTF = new JTextField(tfW + 5);
+		JTextField tipTF = new JTextField(tfW);
 		tipTF.setFont(font);
 		tipTF.setEditable(false);
 		tipTF.setText("提示：");
+		tipTF.setSize(300, 200);
 		this.add(tipTF);
+		JButton tipBtn = new JButton("_");
+		this.add(tipBtn);
 		
 		// 监听 tf0 的输入
 		KeyAdapter kl = new KeyAdapter() {
@@ -177,7 +202,6 @@ public class DigitChangeFrame extends JFrame {
 					return;
 				}
 				
-
 				if (content.matches("0b[0-1]+[Ll]?")) {
 					tipL.setText("提示：二进制");
 					tipTF.setText("提示：二进制");
@@ -206,9 +230,10 @@ public class DigitChangeFrame extends JFrame {
 					
 //					String binary = decimalToBinary(content);
 //					String hex = decimalToHex(content);
-					
+
 					// 转成十进制先
 					Long long1 = Long.valueOf(content, 10);//可消掉前面的无效0
+					System.out.println(long1.toString());
 					String binary2 = "0b" + Long.toBinaryString(long1);
 //					String binary2 = "0b" + decimalToBinary(content);
 					String hex2 = "0x" + Long.toHexString(long1);
@@ -243,6 +268,52 @@ public class DigitChangeFrame extends JFrame {
 			}
 		};
 		btn1.addActionListener(l);
+		
+		ActionListener tipBtnL = new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				tipBtn.setSelected(!tipBtn.isSelected());
+				StringBuilder s1 = new StringBuilder(tf1.getText());
+				StringBuilder s2 = new StringBuilder(tf2.getText());
+				StringBuilder s3 = new StringBuilder(tf3.getText());
+				StringBuilder s4 = new StringBuilder(tf4.getText());
+				
+				if (!tipBtn.isSelected()) {
+					tf1.setText(tf1.getText().replaceAll("_", ""));
+					tf2.setText(tf2.getText().replaceAll("_", ""));
+					tf3.setText(tf3.getText().replaceAll("_", ""));
+					tf4.setText(tf4.getText().replaceAll("_", ""));
+				} else {
+					
+					for (int i = s1.length() - 8; i > 0; i-=8) {
+						if (i <= 2) break;
+						s1.insert(i, "_");
+					}
+					
+					for (int i = s2.length() - 3; i > 0; i-=3) {
+						s2.insert(i, "_");
+					}
+					
+					for (int i = s3.length() - 8; i > 0; i-=8) {
+						if (i <= 2) break;
+						s3.insert(i, "_");
+					}
+					
+					for (int i = s4.length() - 8; i > 0; i-=8) {
+						if (i <= 2) break;
+						s4.insert(i, "_");
+					}
+					
+					tf1.setText(s1.toString());
+					tf2.setText(s2.toString());
+					tf3.setText(s3.toString());
+					tf4.setText(s4.toString());
+				}
+			}
+		};
+		tipBtn.addActionListener(tipBtnL);
 		
 	}
 	
@@ -300,7 +371,7 @@ public class DigitChangeFrame extends JFrame {
 		if (value.matches("\\w+[lL]")) {value = value.substring(0, value.length()-1);}
 //		Long long1 = Long.valueOf(value, 16); // 无法处理负数十六进制
 //		long long1 = Long.parseLong(value, 16); // 无法处理负数十六进制
-		Long long1 = new BigInteger(value, 16).longValue();
+		Long long1 = (Long)(new BigInteger(value, 16).longValue());//先转为Long，再转string，才先显示对的字符串
 		return long1;
 	}
 
