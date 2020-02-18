@@ -154,8 +154,9 @@
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="/Users/fengluo/Documents/Java①/Code"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
 		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="DigitChangeFrame (1) - 16-GUI"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换2.0.jar"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换Release3.0.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换Release3.0.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换2.0.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/进制转换.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/可运行包/CalAndFile.jar"/>
