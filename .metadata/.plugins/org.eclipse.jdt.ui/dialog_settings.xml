@@ -141,6 +141,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/LFAssert.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/RegexTool.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/Files.jar"/>
 			<item value="/Users/fengluo/Documents/Java①/LFJAR/第三方包/FileOperate.jar"/>

@@ -1,6 +1,8 @@
 
 package com.lf.进制转换frame;
 
+import static com.lf.进制转换frame.DigitChangeFrame.hexConvert;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -8,16 +10,50 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.function.BinaryOperator;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
+
+/* 测试：（二 十 十六）6种组合，每中组合有11（10）种情况
+ * ①二 十
+ * 1、（正）超Long最大值（一律判为超出64位）
+ * 2、（正）Long最大值
+ * 3、（正）Long类型
+ * 4、（正）Integer最大值
+ * 5、（正）Integer类型
+ * 6、零
+ * 7、（负）Integer类型
+ * 8、（负）Integer最小值
+ * 9、（负）Long类型
+ * 10、（负）Long最小值
+ * 11、（负）超Long最小值（一律判为超出64位）
+ * 
+ * ②二 十六
+ * 
+ * ③十 二
+ * 
+ * ④十 十六
+ * 
+ * ⑤十六 二
+ * 
+ * ⑥十六 十
+ * 
+ */
+
+/* 需求
+ * 
+ * 二进制、十进制、十六进制之间，整数转换，需满足一下几个条件：
+ * 1、正数转；
+ * 2、负数转；（这个不要忘了）
+ * 3、区分Integer和Long类型的数；（这个要注意，否则转出来的数据有问题）
+ * 4、检测超出Long取值范围；
+ * 5、(可选)识别符号：前缀0b、前缀0x、中间下划线、末尾l和L。
+ * 6、(可选)实时检测：数据类型、数据位数。
+ * 7、不支持浮点数
+ * 
+ */
 
 /**
  * 目前只支持整数
@@ -25,7 +61,7 @@ import javax.swing.JTextPane;
  * 		-【正负整数转成十六进制没问题，但负的十六进制转整数有问题，Long.parseLong和Long.valueOf只认正数，解决如下】
  * 		-【负十六进制 <--> 十进制整数，用 BigInteger 】
  * 		-【负二进制 <--> 十进制整数，要用 BigInteger (有坑，先转Long，再String，勿直接String)】
- * 不支持检测超出Long最大值【二、十、十六进制之间的大小比较，可用 BigInteger 】
+ * 支持检测超出Long取值范围【二、十、十六进制之间的大小比较，可用 BigInteger 】
  * 不支持浮点数
  * 支持下划线
  * @author fengluo
@@ -42,8 +78,10 @@ public class DigitChangeFrame extends JFrame {
 //		System.out.println(Long.MAX_VALUE);// +9223372036854775807 0x7fffffffffffffffL  0b111111111111111111111111111111111111111111111111111111111111111L
 //		System.out.println(Long.MIN_VALUE);// -9223372036854775808 0x8000000000000000L 0b1000000000000000000000000000000000000000000000000000000000000000l
 		
+//		System.out.println(hexConvert("0b1100100l", 10));
+
+//		new DigitChangeFrame().setVisible(true);
 		
-		new DigitChangeFrame().setVisible(true);
 		
 
 		// 如何比较超过Long最大值的数 ———— 用BigDecimal
@@ -138,13 +176,6 @@ public class DigitChangeFrame extends JFrame {
 
 		// 监听 tf0 的输入
 		KeyAdapter kl = new KeyAdapter() {
-//            public void keyTyped(KeyEvent k) {
-//            	tipTF.setForeground(Color.black);
-//                runCalcute(tf0, tf1, tf2, tf3, tf4, tipTF, tipL);
-//            }
-//            public void keyPressed(KeyEvent e) {
-//
-//            }
             public void keyReleased(KeyEvent e) {
             	tipTF.setForeground(Color.black);
             	
@@ -229,19 +260,15 @@ public class DigitChangeFrame extends JFrame {
 		}
 		
 		if (content.contains(".")) {
-//			tipL.setText("提示：暂不支持浮点数");
 			tipTF.setText("提示：暂不支持浮点数");
 			return;
 		}
 		
 		if (content.matches("0b[0-1_]+[Ll]?")) {
-//			"提示：二进制");
 			tipTF.setText("提示：二进制");
 			
 			content = content.replaceAll("(0b)?[_lL]?", "");
-			
 			BigInteger bi = new BigInteger(content, 2);
-			
 			if (bi.bitLength() > 64) { 
 				tipTF.setText("提示：超过64位，重新输入(" + bi.bitLength() + ")");
 				tipTF.setForeground(Color.red);
@@ -319,12 +346,8 @@ public class DigitChangeFrame extends JFrame {
 	}
 	
 	private static String binaryToDecimal(String value) {
-//		if (value.startsWith("0b")) {value = value.substring(2);}
-//		if (value.matches("\\w+\\B[lL]\\b")) {value = value.substring(0, value.length()-1);}
-//		Long long1 = new BigInteger(value, 2).longValue();
-//		return long1;
-		value = value.replaceAll("(0b)?[_lL]?", "");
 		
+		value = value.replaceAll("(0b)?[_lL]?", "");
 		BigInteger bi = new BigInteger(value,2);
 		
 		if (bi.bitLength() <= 32) {
@@ -334,14 +357,10 @@ public class DigitChangeFrame extends JFrame {
 			Long long1 = (Long)bi.longValue();//先转为Long，再转string，才先显示对的字符串
 			return Long.toString(long1);
 		}
+		
 	}
 	
 	private static String binaryToHex(String value) {
-//		if (value.startsWith("0b")) {value = value.substring(2);}
-//		if (value.matches("\\w+\\B[lL]\\b")) {value = value.substring(0, value.length()-1);}
-//		Long longValue = new BigInteger(value, 2).longValue();
-//		String longString = Long.toHexString(longValue);
-//		return longString;
 		
 		value = value.replaceAll("(0b)?[_lL]?", "");
 		BigInteger bi = new BigInteger(value,2);
@@ -374,7 +393,6 @@ public class DigitChangeFrame extends JFrame {
 		
 		// 简便方法
 		value = value.replaceAll("[[+]_lL]", "");
-		
 		BigInteger bi = new BigInteger(value,10);
 		if (bi.bitLength() <= 32) {
 			Integer int1 = (Integer)bi.intValue();//先转为Long，再转string，才先显示对的字符串
@@ -387,7 +405,7 @@ public class DigitChangeFrame extends JFrame {
 	}
 	
 	private static String decimalToHex(String value) {
-		value = value.replaceAll("[[+]_lL]?", "");
+		value = value.replaceAll("[[+]_lL]", "");
 		BigInteger bi = new BigInteger(value,10);
 		if (bi.bitLength() <= 32) {
 			Integer int1 = (Integer)bi.intValue();//先转为Long，再转string，才先显示对的字符串
@@ -433,5 +451,50 @@ public class DigitChangeFrame extends JFrame {
 
 	}
 	
+	/**
+	 * 以上6个方法的通用方法，支持 二、十、十六进制 之间互转
+	 * @param value 二进制以0b开头、十六进制以0x开头、十进制无前缀
+	 * @param destRadix 目标进制： 二、十、十六进制
+	 * @return 目标进制的字符串
+	 */
+	static String hexConvert(String value, int destRadix) {
+		
+		if (value.contains(".")) { System.out.println("暂不支持浮点数"); return null; }
+		if (!(destRadix == 2 || destRadix == 10 || destRadix == 16)) { System.out.println("不支持该进制：" + destRadix); return null;}
+		
+		value = value.replaceAll("[+]", "");// 去掉多余的+
+		
+		int radix = value.startsWith("0b") ? 2 : value.startsWith("0x") ? 16 : 10;
+		
+		// 进制识别、分别处理
+		if (value.matches("0b[0-1_]+[Ll]?")) {
+			value = value.replaceAll("(0b)?[_lL]?", "");
+		} else if (value.matches("[+-]?[0-9_]+[Ll]?")) {
+			value = value.replaceAll("[[+]_lL]", "");
+		} else if (value.matches("0x[0-9a-fA-F_]+[lL]?")) {
+			value = value.replaceAll("(0x)?[_lL]?", "");
+		} else {
+//			System.out.println("不是二、十、十六进制中的一种");
+			return null;
+		}
+//		System.out.println(value);
+//		System.out.println("radix :" + radix);
+		BigInteger bi = new BigInteger(value,radix);
+//		System.out.println("------:" + bi);
+		if (bi.bitLength() > 64) return null;
+		// 这里要判断Integer还是Long（否则二进制位数出错）
+		if (bi.bitLength() <= 32) {
+			Integer int1 = (Integer)bi.intValue();//先转为Long，再转string，才先显示对的字符串
+			String result = destRadix == 2 ? Integer.toBinaryString(int1) : destRadix == 16 ? Integer.toHexString(int1) : Integer.toString(int1);
+//			System.out.println("Integer:" + result);
+			return result;
+		} else {
+			Long long1 = (Long)bi.longValue();//先转为Long，再转string，才先显示对的字符串
+//			System.out.println("Long1:" + long1);
+			String result = destRadix == 2 ? Long.toBinaryString(long1) : destRadix == 16 ? Long.toHexString(long1) : Long.toString(long1);
+//			System.out.println("Long2:" + result);
+			return result;
+		}
+	}
 	
 }

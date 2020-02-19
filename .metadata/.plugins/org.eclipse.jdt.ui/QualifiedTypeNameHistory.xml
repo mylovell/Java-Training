@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Short"/>
-    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
-    <fullyQualifiedTypeName name="com.lf.Student"/>
-    <fullyQualifiedTypeName name="com.lf.Person"/>
     <fullyQualifiedTypeName name="com.lf.EmptyNameException"/>
     <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
@@ -53,11 +49,15 @@
     <fullyQualifiedTypeName name="com.lf.LFAsserts.LFAsserts"/>
     <fullyQualifiedTypeName name="com.lf.regexTool.RegexTool"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="java.lang.Long"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="java.io.EOFException"/>
+    <fullyQualifiedTypeName name="com.lf.LFAssert.LFAssert"/>
+    <fullyQualifiedTypeName name="com.lf.进制转换frame.DigitChangeFrame"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
 </qualifiedTypeNameHistroy>

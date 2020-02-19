@@ -1,11 +1,26 @@
 package com.lf.LFBigInteger;
 
+import java.io.EOFException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-import com.lf.LFAsserts.LFAsserts;
+import com.lf.LFAssert.LFAssert;
 import com.lf.regexTool.RegexTool;
 
+/* 当前数据类型：
+ * 
+ * 1.(正)超出Long范围
+ * 2.(正)Long最大值
+ * 3.(正)Long类型
+ * 4.(正)Integer最大值
+ * 5.(正)Integer类型
+ * 6.零
+ * 7.(负)Integer类型
+ * 8.(负)Integer最小值
+ * 9.(负)Long类型
+ * 10.(负)Long最小值
+ * 11.(负)超出Long范围
+ */
 
 public class LFBigInteger {
 	
@@ -21,52 +36,50 @@ public class LFBigInteger {
 	private static final BigDecimal ZERO = BigDecimal.ZERO;
 	
 	public static void main(String[] args) {
-//		// 超出long二进制位
-//		System.out.println(identifyNumber("0b1111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_11"));
-//		// (正)long最大值
-//		System.out.println(identifyNumber("0b1111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111"));
-//		// (正)Long类型
-//		System.out.println(identifyNumber("0b11_01000110_11011100_01011101_01100011_10001000_01100101"));
-//		// (正)Integer最大
-//		System.out.println(identifyNumber("0b1111111_11111111_11111111_11111111"));
-//		// (正)Integer类型
-//		System.out.println(identifyNumber("0b1100100"));
-//		// 0
-//		System.out.println(identifyNumber("0b0"));
-//		// (负)Integer类型
-//		System.out.println(identifyNumber("0b11111111_11111111_11110010_10000000"));
-//		// (负)Integer最小值
-//		System.out.println(identifyNumber("0b10000000000000000000000000000000"));
-//		// (负)Long类型 -92233720368547758
-//		System.out.println(identifyNumber("0b11111110_10111000_01010001_11101011_10000101_00011110_10111000_01010010"));
-//		// (负)Long最小
-//		System.out.println(identifyNumber("0b10000000_00000000_00000000_00000000_00000000_00000000_00000000_00000000"));
+		// 超出long二进制位
+		System.out.println(numberType("0b1111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111_11"));
+		// (正)long最大值
+		System.out.println(numberType("0b1111111_11111111_11111111_11111111_11111111_11111111_11111111_11111111"));
+		// (正)Long类型
+		System.out.println(numberType("0b11_01000110_11011100_01011101_01100011_10001000_01100101"));
+		// (正)Integer最大
+		System.out.println(numberType("0b1111111_11111111_11111111_11111111"));
+		// (正)Integer类型
+		System.out.println(numberType("0b1100100"));
+		// 0
+		System.out.println(numberType("0b0"));
+		// (负)Integer类型
+		System.out.println(numberType("0b11111111_11111111_11110010_10000000"));
+		// (负)Integer最小值
+		System.out.println(numberType("0b10000000000000000000000000000000"));
+		// (负)Long类型 -92233720368547758
+		System.out.println(numberType("0b11111110_10111000_01010001_11101011_10000101_00011110_10111000_01010010"));
+		// (负)Long最小
+		System.out.println(numberType("0b10000000_00000000_00000000_00000000_00000000_00000000_00000000_00000000"));
 
-//		System.out.println(identifyNumber("92233720368547758078"));
-//		System.out.println(identifyNumber("9223372036854775807"));
-//		System.out.println(identifyNumber("92233720368547758"));
-//		System.out.println(identifyNumber("2147483647"));
-//		System.out.println(identifyNumber("21474836"));
-//		System.out.println(identifyNumber("0"));
-//		System.out.println(identifyNumber("-21474836"));
-//		System.out.println(identifyNumber("-2147483648"));
-//		System.out.println(identifyNumber("-92233720368547758"));
-//		System.out.println(identifyNumber("-9223372036854775808"));
-//		System.out.println(identifyNumber("-92233720368547758078"));
+		System.out.println(numberType("92233720368547758078"));
+		System.out.println(numberType("9223372036854775807"));
+		System.out.println(numberType("92233720368547758"));
+		System.out.println(numberType("2147483647"));
+		System.out.println(numberType("21474836"));
+		System.out.println(numberType("0"));
+		System.out.println(numberType("-21474836"));
+		System.out.println(numberType("-2147483648"));
+		System.out.println(numberType("-92233720368547758"));
+		System.out.println(numberType("-9223372036854775808"));
+		System.out.println(numberType("-92233720368547758078"));
 		
-		System.out.println(identifyNumber("92233720368547758078"));
-		System.out.println(identifyNumber("0x7fffffffffffffff"));
-		System.out.println(identifyNumber("0x7ffffffffffffff"));
-		System.out.println(identifyNumber("0x7fffffff"));
-		System.out.println(identifyNumber("21474836"));
-		System.out.println(identifyNumber("0"));
-		System.out.println(identifyNumber("-21474836"));
-		System.out.println(identifyNumber("0x80000000"));
-		System.out.println(identifyNumber("0x8000000000000011"));
-		System.out.println(identifyNumber("0x8000000000000000"));
-		System.out.println(identifyNumber("-92233720368547758078"));
-		
-		
+		System.out.println(numberType("92233720368547758078"));
+		System.out.println(numberType("0x7fffffffffffffff"));
+		System.out.println(numberType("0x7ffffffffffffff"));
+		System.out.println(numberType("0x7fffffff"));
+		System.out.println(numberType("21474836"));
+		System.out.println(numberType("0"));
+		System.out.println(numberType("-21474836"));
+		System.out.println(numberType("0x80000000"));
+		System.out.println(numberType("0x8000000000000011"));
+		System.out.println(numberType("0x8000000000000000"));
+		System.out.println(numberType("-92233720368547758078"));
 		
 		
 		
@@ -81,7 +94,7 @@ public class LFBigInteger {
 		
 	}
 	
-	static String identifyNumber(String content) {
+	static String numberType(String content) {
 
 		if (content == null || content.equals("")) {
 			return "提示：请输入值";

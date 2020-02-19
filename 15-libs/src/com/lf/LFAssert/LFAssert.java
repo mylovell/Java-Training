@@ -1,6 +1,6 @@
-package com.lf.LFAsserts;
+package com.lf.LFAssert;
 
-public class LFAsserts {
+public class LFAssert {
 
 	public static void test(boolean v) {
 		if (v) return;
