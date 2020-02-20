@@ -6,16 +6,9 @@ import static com.lf.进制转换frame.DigitChangeFrame.*;
 
 public class LFTest {
 
-	
-	
 	public static void main(String[] args) {
 		
-		
-		
 		test_hexConvert();
-		
-		
-		
 		
 	}
 
